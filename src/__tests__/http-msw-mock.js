@@ -1,3 +1,5 @@
+//TODO preferred way to mock out API instead of using mock
+
 import 'whatwg-fetch'
 import * as React from 'react'
 import {render, screen, waitFor} from '@testing-library/react'

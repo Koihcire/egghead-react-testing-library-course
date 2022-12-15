@@ -16,6 +16,8 @@ test('loads greetings on click', async () => {
   userEvent.click(loadButton)
   expect(mockLoadGreeting).toHaveBeenCalledWith('Mary')
   expect(mockLoadGreeting).toHaveBeenCalledTimes(1)
+
+  // need to use waitFor because there is a setGreeting that is supposed to populate the div greeting with data from the api call
   await waitFor(() =>
     expect(screen.getByLabelText(/greeting/i)).toHaveTextContent(testGreeting),
   )

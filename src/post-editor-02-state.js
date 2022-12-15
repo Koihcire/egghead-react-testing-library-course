@@ -3,6 +3,7 @@ import * as React from 'react'
 function Editor() {
   const [isSaving, setIsSaving] = React.useState(false)
   function handleSubmit(e) {
+    //prevents the page from refreshing
     e.preventDefault()
     setIsSaving(true)
   }
